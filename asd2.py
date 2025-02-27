@@ -67,7 +67,7 @@ def main():
     st.title("📊 BTC Return Outlier Detection")
     
     timeframe = st.sidebar.radio("Select Timeframe", ["1H", "4H"], index=0)
-    nbins = st.sidebar.slider("Select Number of Bins for Histogram", min_value=10, max_value=200, value=100, step=10)
+    nbins = st.sidebar.slider("Select Number of Bins for Histogram", min_value=10, max_value=1000, value=100, step=10)
     
     data = load_data(timeframe)
     data = calculate_returns(data)
